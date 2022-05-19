@@ -16,4 +16,7 @@ export class UsersService {
   async create(userData: CreateUserDto): Promise<User> {
     return this.userRepository.save(userData);
   }
+  async deleteAll() {
+    return this.userRepository.clear();
+  }
 }
